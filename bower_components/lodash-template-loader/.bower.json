@@ -1,0 +1,24 @@
+{
+  "name": "lodash-template-loader",
+  "version": "0.1.9",
+  "main": "loader.js",
+  "dependencies": {
+    "lodash": "*"
+  },
+  "devDependencies": {
+    "qunit": "~1.12.0",
+    "requirejs": "~2.1.8",
+    "curl": "~0.8.2",
+    "dojo": "~1.9.1"
+  },
+  "homepage": "https://github.com/tbranyen/lodash-template-loader",
+  "_release": "0.1.9",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.9",
+    "commit": "db33c52cd5cf92783f71e83392ec2a9e1a75f639"
+  },
+  "_source": "git://github.com/tbranyen/lodash-template-loader.git",
+  "_target": "~0.1.6",
+  "_originalSource": "lodash-template-loader"
+}
