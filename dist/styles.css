@@ -2125,3 +2125,4 @@ button.close {-webkit-appearance: none; padding: 0; cursor: pointer; background:
 body {background: #333; color: white;}
 .modal-content {color: white; background: #333;}
 .modal-footer {border-color: #494949;}
+label.error {color: #FF1919;}

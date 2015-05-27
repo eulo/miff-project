@@ -18,7 +18,8 @@ define(function(require, exports, module) {
   // Defining the application router.
   var Router = Backbone.Router.extend({
     routes: {
-      "": "index"
+      "": "index",
+      "~emotiontrackermi/": "index"
     },
 
     index: function() {
