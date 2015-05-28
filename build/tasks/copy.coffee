@@ -5,5 +5,6 @@ module.exports = ->
   @config "copy",
     release:
       files: [
-        src: "bower_components/**", dest: "dist/"
+        src: ["bower_components/**", "app/img/**"],
+        dest: "dist/"
       ]

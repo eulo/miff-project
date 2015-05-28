@@ -87,7 +87,7 @@ th {padding: 0;}
   .dropup > .btn > .caret {border-top-color: #000 !important;}.label {border: 1px solid #000;}.table {border-collapse: collapse !important;}.table td,
   .table th {background-color: #fff !important;}.table-bordered th,
   .table-bordered td {border: 1px solid #ddd !important;}}
-@font-face {font-family: 'Glyphicons Halflings'; src: url('/app/img/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');}
+@font-face {font-family: 'Glyphicons Halflings'; src: url('app/img/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');}
 .glyphicon {position: relative; top: 1px; display: inline-block; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
 .glyphicon-asterisk:before {content: "\2a";}
 .glyphicon-plus:before {content: "\2b";}
@@ -2135,10 +2135,16 @@ h2 {font-size: 36px;}
 h3 {font-size: 28px;}
 .btn {font-size: 28px; text-transform: uppercase; padding: 8px 19px;}
 .form-control {font-size: 18px; padding: 8px 19px;}
-.e1,.e2,.e3,.e4,.e5,.e6 {width: 170px; height: 170px; border-radius: 50%; margin: 0 auto 10px;}
+.e1,.e2,.e3,.e4,.e5,.e6 {width: 140px; height: 140px; border-radius: 50%; margin: 0 auto 10px; font-size: 22px;}
 .e1 {background-color: #fddf50; border-color: #fddf50; color: black;}
+.e1:hover, .e1.active, .e1:focus {background-color: #fddf50; border-color: #fddf50; color: black;}
 .e2 {background-color: #c4a6e1; border-color: #c4a6e1;}
+.e2:hover, .e2.active, .e2:focus {background-color: #c4a6e1; border-color: #c4a6e1;}
 .e3 {background-color: #c7d9e6; border-color: #c7d9e6; color: black;}
+.e3:hover, .e3.active, .e3:focus {background-color: #c7d9e6; border-color: #c7d9e6; color: black;}
 .e4 {background-color: #92aba0; border-color: #92aba0; color: black;}
+.e4:hover, .e4.active, .e4:focus {background-color: #92aba0; border-color: #92aba0; color: black;}
 .e5 {background-color: #3d4542; border-color: #3d4542;}
+.e5:hover, .e5.active, .e5:focus {background-color: #3d4542; border-color: #3d4542;}
 .e6 {background-color: #fb3448; border-color: #fb3448;}
+.e6:hover,.e6.active, .e6:focus {background-color: #fb3448; border-color: #fb3448;}
