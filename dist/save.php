@@ -7,7 +7,7 @@ if (!isset($_POST)) {
   die;
 }
 
-$dsn = "mysql:host=localhost;dbname=emotiont_db1";
+$dsn = "mysql:host=101.0.91.194;dbname=emotiont_db1";
 $user = "emotiont_dev";
 $pass = "4yascx$.cg9h";
 
