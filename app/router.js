@@ -144,7 +144,7 @@ define(function(require, exports, module) {
               parent.$el.html(parent.template);
               parent.data.session_end = new Date().toString();
               console.log(parent.data);
-              $.post('save', parent.data);
+              $.post('save.php', parent.data);
               this.undelegateEvents();
             }, 
             back: function(event) {
