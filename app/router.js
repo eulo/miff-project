@@ -53,6 +53,18 @@ define(function(require, exports, module) {
           event.preventDefault();
           this.data = $('form').serializeObject();
           this.data.emotions = [];
+          $('form').validate({
+            errorPlacement: function(error, element) {
+             error.appendTo(element.parents('.form-group'));
+            },
+            rules : {
+              fitbit_id: {
+                required: function(element) {
+                  return $('input[name="fitbit_bool"]:checked').val() === 'true';
+                }
+              }
+            }
+          });
 
           if (!$('form').valid())
             return;
