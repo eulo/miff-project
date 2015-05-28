@@ -6,3 +6,5 @@ module.exports = ->
     release:
       files:
         "dist/index.html": ["index.html"]
+        "dist/save.php": ["save.php"]
+        "dist/.htaccess": [".htaccess"]

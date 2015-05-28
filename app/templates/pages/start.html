@@ -19,15 +19,15 @@ countdown to start the film.
   <div class="form-group">
     <label>Are you using a heart rate tracker (fit bit)</label>
     <label class="radio-inline">
-      <input name='fitbit' type="radio" name="inlineRadioOptions" id="inlineRadio1" value="yes"> Yes
+      <input name='fitbit_bool' type="radio" id="inlineRadio1" value="true"> Yes
     </label>
     <label class="radio-inline">
-      <input name='fitbit' type="radio" name="inlineRadioOptions" id="inlineRadio2" value="no"> No
+      <input name='fitbit_bool' type="radio" id="inlineRadio2" value="false"> No
     </label>
   </div>
   <div class="form-group">
     <label for="fitbit-number">Enter the supplied fit bit number</label>
-    <input name='number' type="text" class="form-control" id="fitbit-number" placeholder="001">
+    <input name='fitbit_id' type="text" class="form-control" id="fitbit-number" placeholder="001">
   </div>
   <button type="submit" data-event="start" class="btn btn-primary">Start</button>
 </form>

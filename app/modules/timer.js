@@ -38,6 +38,10 @@ define(function(require, exports, module) {
       updateInt = null;
       updateInt = setInterval(this.updateFunc, 1000);
     };
+
+    this.current = function() {
+      return $this.text();
+    };
     
     this.play(); 
   };

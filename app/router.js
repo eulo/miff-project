@@ -34,7 +34,16 @@ define(function(require, exports, module) {
           'click button[data-event="next"]': 'next',
           'click button[data-event="start"]': 'start',
           'click button[data-event="pause"]': 'pause',
-          'click button[data-event="finish"]': 'finish'
+          'click button[data-event="finish"]': 'finish',
+          'click button[data-event="emotion"]': 'emotion'
+        },
+        emotion: function(event) {
+          var emotion = $(event.currentTarget).data('emotion');
+          var time = this.timer.current();
+          this.data.emotions.push({
+            emotion: emotion,
+            time: time
+          });
         },
         next: function(event) {
           this.template = require("template!./templates/pages/start");
@@ -43,6 +52,7 @@ define(function(require, exports, module) {
         start: function(event) {
           event.preventDefault();
           this.data = $('form').serializeObject();
+          this.data.emotions = [];
 
           if (!$('form').valid())
             return;
@@ -57,6 +67,7 @@ define(function(require, exports, module) {
               clearInterval(countDown);
               $('#modal').modal('hide');
               parent.timer = new Timer();
+              parent.data.session_start = new Date().toString();
             }
           }, 1000); 
 
@@ -70,6 +81,7 @@ define(function(require, exports, module) {
               parent.template = require("template!./templates/pages/start");
               parent.$el.html(parent.template);
               clearInterval(countDown);
+              this.undelegateEvents();
             }
           });
 
@@ -92,10 +104,12 @@ define(function(require, exports, module) {
             },
             resume: function(event) {
               parent.timer.play(); 
+              this.undelegateEvents();
             }, 
             back: function(event) {
               parent.template = require("template!./templates/pages/start");
               parent.$el.html(parent.template);
+              this.undelegateEvents();
             }
           });
 
@@ -116,13 +130,19 @@ define(function(require, exports, module) {
             submit: function(event) {
               parent.template = require("template!./templates/pages/finish");
               parent.$el.html(parent.template);
+              parent.data.session_end = new Date().toString();
+              console.log(parent.data);
+              $.post('save', parent.data);
+              this.undelegateEvents();
             }, 
             back: function(event) {
               parent.template = require("template!./templates/pages/start");
               parent.$el.html(parent.template);
+              this.undelegateEvents();
             },
             cancel: function(event) {
               parent.timer.play(); 
+              this.undelegateEvents();
             }
           });
         },
